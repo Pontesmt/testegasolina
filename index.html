@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etanol X Gasolina</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div id="header">
+        <h1>Etanol x Gasolina</h1>
+        <h2>Compare o preço do litro do álcool com o da gasolina e veja qual deles é mais vantajoso financeiramente.
+        </h2>
+
+
+    </div>
+
+
+    <div id="content">
+
+        <h3> O Etanol vale a pena quando custar até 70% do valor da gasolina </h3>
+        <p>Preencha os campos abaixo com os preços dos combustíveis que você encontra hoje nos postos e clique no botão
+            “calcular” para saber qual é a melhor opção.</p>
+
+        <div id="area-calc">
+
+            <div id="form">
+
+                <form>
+                    <label>Informe o preço do Etanol</label><br>
+                    <input type="text" id="etanol" placeholder="Ex= 4.89">
+
+                    <br>
+
+                    <label>Informe o preço do Gasolina</label><br>
+                    <input type="text" id="gasolina" placeholder="Ex= 5.39">
+
+                    <br>
+
+                    <button type="button" onclick="calcularCombustivel()">Calcular</button>
+
+
+
+                </form>
+
+
+            </div>
+
+            <div id="result">
+                <h4>
+                    Abasteça com: <br>
+                    <strong id="combustivel"></strong>
+                </h4>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="footer">
+        <p>Projeto desenvolvido pela <a href="https://www.cotiinformatica.com.br/" target="_blank"> coti informatica</a>
+        </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="js/scriptgas.js"></script>
+
+    <script>
+        //inicializando biblioteca jquery padrao
+        $(document).ready(function () {
+
+            $('#etanol').mask('00.00', {reverse: true });
+            $('#gasolina').mask('00.00', {reverse: true });
+            //ao soltar uma tecla
+            $('#gasolina').keyup(function (e) {
+                console.log(e.key);
+                if (e.key == 'Enter') {
+                    calcularCombustivel();
+                }
+            })
+
+        })
+
+    </script>
+
+
+</body>
+
+
+
+
+</html>

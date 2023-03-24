@@ -1,0 +1,173 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    margin: 0;
+}
+
+#header {
+    width: 100%;
+    height: auto;
+    background-image: url(../img/backgroun.png);
+    background-size: cover;
+    background-position: center;
+    /*faz com que a imagem ocupe toda a div*/
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+}
+
+
+#header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+
+}
+
+#header h2 {
+    font-size: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#content {
+
+    max-width: 700px;
+    margin: 80px auto;
+
+}
+
+#content h3 {
+    color: #555555;
+    font-size: 24px;
+}
+
+
+
+
+#form {
+
+    margin: auto;
+}
+
+#form button {
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: #003366;
+    color: white;
+    font-size: 16px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#form input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+
+    box-sizing: border-box; /*faz cin que a borda e o padding nao interfiram nas dimensoes|*/
+}
+
+#result {
+    width: 350px;
+    height: auto;
+    background-color: #0066CC;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    visibility: hidden;
+   
+}
+
+#result h4 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 400;
+}
+
+#area-calc {
+    /*flex container*/
+    display: flex;
+    /*habilita o flexbox*/
+    justify-content: space-between;
+    /*distribui na horizontal o espaço vazio entre itens*/
+    align-items: center;
+    /*centraliza os itens na vertical*/
+}
+
+#footer {
+    width: 100%;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 17px 0;
+    font-size: 14px;
+}
+
+#footer a {
+    color: white;
+}
+
+@media (max-width:767px) {
+
+    #header h1 {
+        font-size: 32px;
+    }
+
+    #header h2 {
+        font-size: 20px;
+    }
+
+    #contente h3 {
+        font-size: 20px;
+    }
+
+
+    p,label {
+        font-size: 14px;
+    }
+
+    #content {
+        width: 95%;
+    }
+
+    #area-calc {
+        flex-direction: column;
+    }
+
+    #form, #form input, #form button, #result {
+        width: 100%;
+    }
+
+    #result{
+        margin-top: 20px;
+    }
+
+
+}
+
+
+
+
+/*para telas Full HD (1920 x 1080)*/
+@media (min-width: 1600px) {
+    #header {
+        padding-top: 169px;
+        padding-bottom: 169px;
+    }
+
+}
